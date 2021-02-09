@@ -1,0 +1,8 @@
+description = 'Use cases: Casos de uso del proyecto'
+
+dependencies {
+    compile project(':model')
+
+    implementation libs.spring_boot
+
+}

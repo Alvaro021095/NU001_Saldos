@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "cost": "#number? _.toString().length <= 3",
+      "description": "#string? _.length <= 50"
+    }
+  ],
+  "status": {
+    "code": "#string",
+    "title": "#string",
+    "detail": "#string",
+    "severity": "#string"
+  }
+}

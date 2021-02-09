@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "rechargeInformation": {
+        "categoryCode": "C0001",
+        "serviceCode": "S0001",
+        "serviceSupplierCode": "PS001",
+        "referenceRecharge": "6190795",
+        "rechargeAmount": "1000"
+      },
+      "paymentInformation": {
+        "typeProduct": "S",
+        "numberProduct": "03110001000"
+      }
+    }
+  ]
+}

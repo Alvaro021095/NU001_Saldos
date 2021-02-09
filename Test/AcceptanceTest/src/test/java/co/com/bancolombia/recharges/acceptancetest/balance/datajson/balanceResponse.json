@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "customerInformation": {
+        "documentType": "#string? _.length <= 5",
+        "documentNumber": "#string? _.length <= 15"
+      },
+      "productInformation": {
+        "productType": "#string? _.length >= 3 && _.length <= 15",
+        "balance": "#string",
+        "lastBalanceDate": "##string",
+        "outstandingBalance": "##string",
+        "travelCreditBalance": "##string",
+        "firstReferenceType": "##string",
+        "firstReferenceNumber": "##string",
+        "secondReferenceType": "##string",
+        "secondReferenceNumber": "##string"
+      }
+    }
+  ]
+}

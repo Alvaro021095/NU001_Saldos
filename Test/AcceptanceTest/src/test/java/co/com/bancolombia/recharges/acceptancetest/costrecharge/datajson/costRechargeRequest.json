@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "_messageId": "e13a7e3e-7a59-40ea-b899-5a0f7f02cdcc",
+    "_applicationId": "APP_PERSONAS"
+  },
+  "data": [
+    {
+      "costRequestInformation": {
+        "supplierServiceCode": "P001",
+        "serviceCode": "S001",
+        "categoryCode": "C001"
+      }
+    }
+  ]
+}

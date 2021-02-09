@@ -1,0 +1,29 @@
+{
+  "servicesMetaInfo": {
+    "operationId": "#number? _.toString().length >= 1 && _.toString().length <= 10",
+    "operationName": "#string? _.length <= 50",
+    "description": "#string? _.length <= 50",
+    "inputGroups": "#[]"
+  },
+  "inputGroups":
+  {
+    "groupInputId": "#number? _.toString().length >= 1 && _.toString().length <= 10",
+    "description": "#string? _.length <= 50",
+    "inputs": "#[]"
+  },
+  "inputs":
+    {
+      "inputId": "#number? _.toString().length >= 1 && _.toString().length <= 10",
+      "inputReference": "#string? _.length <= 50",
+      "description": "#string? _.length <= 50",
+      "type": "#string? _.length <= 50",
+      "minLength": "#number? _.toString().length <= 3 ",
+      "maxLength": "#number? _.toString().length <= 3 ",
+      "options": "##[]"
+    },
+  "options" :
+  {
+    "value": "#string",
+    "textOption": "#string"
+  }
+}

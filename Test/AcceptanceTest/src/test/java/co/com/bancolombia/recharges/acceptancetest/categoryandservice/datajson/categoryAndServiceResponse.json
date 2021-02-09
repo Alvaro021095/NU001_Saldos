@@ -1,0 +1,23 @@
+[
+    {
+      "categoryInformation": {
+        "categoryCode": "#string? _.length <= 5",
+        "categoryName": "#string? _.length <= 50",
+        "supplierList": [
+          {
+            "serviceSupplierCode": "#string? _.length <= 5",
+            "serviceSupplierName": "#string? _.length <= 50",
+            "serviceList": [
+              {
+                "serviceCode": "#string? _.length <= 10",
+                "serviceName": "#string? _.length <= 50",
+                "serviceStatus": "#boolean"
+              }
+            ],
+            "serviceSupplierStatus": "#boolean"
+          }
+        ],
+        "categoryStatus": "#boolean"
+      }
+    }
+  ]

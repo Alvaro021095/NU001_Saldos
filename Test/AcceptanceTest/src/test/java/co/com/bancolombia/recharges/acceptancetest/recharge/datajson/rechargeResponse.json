@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "customerInformation": {
+        "documentType": "#string",
+        "documentNumber": "#string"
+      },
+      "rechargeResponseInformation": {
+        "transactionCode": "#string",
+        "stateRecharge": "#string",
+        "rejectCode":"##string",
+        "rejectDescription": "##string",
+        "dateHourRequestRecharge": "#string",
+        "dateHourAnswerRecharge": "#string",
+        "referenceRecharge": "#string",
+        "rechargeAmount": "#string",
+        "rechargeCost": "#string"
+      },
+      "status": {
+        "code": "#string",
+        "title": "#string",
+        "detail": "#string",
+        "severity": "#string"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "servicesDetail": {
+        "serviceCode": "#string? _.length <= 5",
+        "serviceName": "#string? _.length <= 50",
+        "serviceDescription": "#string? _.length <= 50",
+        "categoryCode": "#string? _.length <= 5",
+        "supplierCode": "##string? _.length <= 5",
+        "minRechargeValue": "#number? _.toString().length <= 10",
+        "maxRechargeValue": "#number? _.toString().length <= 10",
+        "servicesMetaInfo": "#[]"
+      }
+    }
+  ],
+  "status": {
+    "code": "#string",
+    "title": "#string",
+    "detail": "#string",
+    "severity": "#string"
+  }
+}
