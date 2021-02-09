@@ -13,7 +13,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 @Configuration
 public class RoutePrueba {
 
-    @Value("${rou.prueba:/prueba}")
+    //@Value("${rou.prueba:/prueba}")
     private String routePrueba;
 
     @Bean
@@ -22,7 +22,7 @@ public class RoutePrueba {
                 POST("/test")
                         .and(accept(APPLICATION_JSON))
                         .and(contentType(APPLICATION_JSON)), handler::getTest)
-                .andRoute(GET(routePrueba)
+                .andRoute(GET("routePrueba")
                         .and(accept(APPLICATION_JSON))
                         .and(contentType(APPLICATION_JSON)), handler::getTest);
 
