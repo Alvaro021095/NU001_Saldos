@@ -18,9 +18,6 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class WebClientConfig {
 
-    @Value("${security.jwt.rsa}")
-    private String rsa;
-
     @Value("${routes.apiConnect.urlBase}")
     private String urlBase;
 
