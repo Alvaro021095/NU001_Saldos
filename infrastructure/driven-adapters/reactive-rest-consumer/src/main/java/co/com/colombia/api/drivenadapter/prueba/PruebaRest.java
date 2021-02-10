@@ -14,7 +14,7 @@ public class PruebaRest implements PruebaGateway {
     @Autowired
     private WebClient webClient;
 
-    @Value("${uri.prueba}")
+    @Value("${uri.prueba:/getTest}")
     private String uriPrueba;
 
     public PruebaRest(){ }

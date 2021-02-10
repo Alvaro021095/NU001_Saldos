@@ -18,13 +18,13 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class WebClientConfig {
 
-    @Value("${routes.apiConnect.urlBase}")
+    @Value("${routes.apiConnect.urlBase:https://practica-webclient.getsandbox.com:443}")
     private String urlBase;
 
-    @Value("${timeOut.generalApiConnect}")
+    @Value("${timeOut.generalApiConnect:20}")
     private int timeoutRead;
 
-    @Value("${timeOut.timeoutConnection}")
+    @Value("${timeOut.timeoutConnection:20}")
     private int timeoutConnection;
 
     @Bean

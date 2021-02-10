@@ -9,9 +9,6 @@ public class PruebaUseCase {
 
     private PruebaGateway pruebaGateway;
 
-    @Value("${routes.uriGetBalance}")
-    private String route;
-
     public PruebaUseCase(PruebaGateway pruebaGateway){
         this.pruebaGateway = pruebaGateway;
     }
