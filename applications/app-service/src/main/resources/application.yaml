@@ -1,0 +1,75 @@
+uri:
+  prueba: /getTest
+
+### Configuracion  Servidor
+server:
+  port: 8087
+
+### Configuracion para Obtener llaves de consumo Apic Connect.
+CGC:
+  AW:
+    APP: AW1059001
+    SVP: AW0278001
+  secret:
+    region: us-east-1
+    apiKeys: nu0014001-lifecoach-capa-gestion-qa-aws-api-keys-secret-cgc
+
+#Rutas que se expondran desde el orquestador de Life Coach
+routes:
+  recharge:
+    categoriesAndService: /recharge/categoriesandservices
+  details:
+    details: /recharge/details
+  costrecharge: /recharge/costrecharge
+  uriGetBalance: /recharges/balance
+  recharges:
+    recharge: /recharges/recharge
+  #Rutas de api connect
+  apiConnect:
+    urlBase: https://api-aws-qa.apps.ambientesbc.com
+    uriRecharge: /int/testing/v1/operations/product-specific/consumer-services/recharges
+    uriGetBalance: /int/testing/v1/operations/product-specific/consumer-services/recharges/product/balance
+
+#Rutas que se consumiran desde el orquestador de Recargas
+routesRech:
+  urlBaseRecharge: https://young-tree-722.getsandbox.com:443
+  urlRecharges: /v1
+
+foreign-customer-message:
+  cod-error: BPRCG206
+  message-text: "Pr&oacute;ximamente habilitaremos esta opci&oacute;n para nuestros clientes del exterior. Realiza tu recarga en los canales dispuestos por el Metro."
+
+
+documents-cannot-to-do-civic-recharge:
+  listDocuments: CE, PASS, ID, FC
+
+#Rutas Redis y Sqs Logs
+routesPersist:
+  port: 6379
+  redis: nu0014001-lifecoach-capa-gestion-qa-ec-cluster.royljl.0001.use1.cache.amazonaws.com
+  sqs: nu0014001-lifecoach-capa-gestion-qa-logs
+
+
+security:
+  jwt:
+    issuer: "NU0014001"
+    subject: "515b6d82-facd-45d5-9619-86044809e85b"
+    audience: "APIGateway_LAN"
+    certificate: "-----BEGIN CERTIFICATE-----MIIEGjCCAwICCQDQwL+MSkytvTANBgkqhkiG9w0BAQsFADCBzjELMAkGA1UEBhMCQ08xEjAQBgNVBAgMCUFOVElPUVVJQTERMA8GA1UEBwwITUVERUxMSU4xGDAWBgNVBAoMD0JBTkNPTE9NQklBIFMuQTEmMCQGA1UECwwdVklDRVBSRVNJREVOQ0lBIERFIFRFQ05PTE9HSUExKjAoBgNVBAMMIWV4dGVybmFsLWRldi5hcHBzLmFtYmllbnRlc2JjLmNvbTEqMCgGCSqGSIb3DQEJARYbd2Rtb2xpbmFAYmFuY29sb21iaWEuY29tLmNvMB4XDTIwMDkyMzE5NTE1MFoXDTIxMDkyMzE5NTE1MFowgc4xCzAJBgNVBAYTAkNPMRIwEAYDVQQIDAlBTlRJT1FVSUExETAPBgNVBAcMCE1FREVMTElOMRgwFgYDVQQKDA9CQU5DT0xPTUJJQSBTLkExJjAkBgNVBAsMHVZJQ0VQUkVTSURFTkNJQSBERSBURUNOT0xPR0lBMSowKAYDVQQDDCFleHRlcm5hbC1kZXYuYXBwcy5hbWJpZW50ZXNiYy5jb20xKjAoBgkqhkiG9w0BCQEWG3dkbW9saW5hQGJhbmNvbG9tYmlhLmNvbS5jbzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKZSLgckpquH/pV9Dc7VC4Zd0bylxYtOWyq7+QTpI5r88KNYzUC5UC2YgdoP5uHh8+e6bUrDHr7T7yis56mqij1VZUTgdT6JyV33k+PPuD15t2NcndT4ZQ37ppUCa6pTAMuMB7A4uOZ7twValFZbPpg6w6KjvsBVq4X2da3U34ixHEPs5XwMEmmZysmhmdVqH3auDdOWcPJoV4Z2fLsR3EyiZz+Uj/MUljJSUyTUu98j+fvDMTjMYc5YZ3s+hK6R6aNBk++o41xht6xpPRLXnWX7StHvHC88Y8mpGeAPQNQi4lLdvWnAG0naFZWkAdSn0qQvdbr9oCtNpy4J77EATksCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEATmuNsz1SUMknXLS6pGd1gSd0uSOyXV+W34pfIdGUL6iaZ1lY5NJdRt8EnbgTWAGure6ZPj8bGfaqE/MjQSxQi3ghT574u+YKQtkyvCWADDvi8yGc9E/yWmjIzeavGubA9RGztmzk69UItrgl4x8wtYvlXK3wlRWTh6P2ax48f5QVm7FrKqE54k1JJGHp/n9Dzv2sqBwXgtZNvhJuahO2mYywdjFc6s1KPa7QsqHybHhosP4gW8HyzgCPhobpjFCmUVGwru0Q4XkTz8WmnO01BmCn3da9cKGsmswK6ybbsyftT2Aldgk44KHVB5awaTcX98ffDSKPBkrA0z+t2UKTIg==-----END CERTIFICATE-----"
+    rsa: "MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCmUi4HJKarh/6VfQ3O1QuGXdG8pcWLTlsqu/kE6SOa/PCjWM1AuVAtmIHaD+bh4fPnum1Kwx6+0+8orOepqoo9VWVE4HU+icld95Pjz7g9ebdjXJ3U+GUN+6aVAmuqUwDLjAewOLjme7cFWpRWWz6YOsOio77AVauF9nWt1N+IsRxD7OV8DBJpmcrJoZnVah92rg3TlnDyaFeGdny7EdxMomc/lI/zFJYyUlMk1LvfI/n7wzE4zGHOWGd7PoSukemjQZPvqONcYbesaT0S151l+0rR7xwvPGPJqRngD0DUIuJS3b1pwBtJ2hWVpAHUp9KkL3W6/aArTacuCe+xAE5LAgMBAAECggEBAJNEXucKR93IG97njMtgDsVZ2zVrnv/bUJQFPthfSpyYbMZmAc/WhizpRcj8nZXSiTHc+5rgLCAR7kiY2MN9csweCf4ztPy76iYe6r8jlOIyHPSI9GO30VrRQU3dh9GXjzOr+L7LasUCNCs0afYQ8tq95a3jySnqcWa7tLVHsOoJYsmVZMIiZSivGMNDbqdHz2HChfspzWoKGN2t8qWVkDhFonv+n7P24X5EonSu9Q6UMgwKbimhZNosg6P+VlWUg27EgT358EKQdefm9w8A+Fs7pTg1iu7mXUAtNXmbhpMtFz/XWGdWP14RxdfcwmzI6aeivCY9thN4QfFHfMFGpqkCgYEA2DnZENcNKIZjQXfO3o5SMea+1XbjqM7065X0nL244ifhJyB0emwZJEDnmlUdzHm1C96DB1cGTA9kqFdHrH1f7aOBkVCaIiYv81tK+tQq/c4qQQ6nCAC09QG/a7EnjGNm4H9QopHw+Y6FzgE/TZSAETogn83ThCEG8XKif0C+v+0CgYEAxOpKiqjtAXVT/ZggF/Cg9A/6DmDfaCgBesWwdJm2AC8LGNwu9PZ3ALgPr4To7sxdBU8xLlL6IFXrYPEpFiziw/P2afTKqAu4iw6poTsYrMGdyEYAmgcBGojsEZBZJePbMxhkMfPJ95PgMqlZpJrOuSzpYLgvtNkQQF5DxXkPUBcCgYEAmzBhr+l5QzW49VsE+c0SB0jCfLkYyqbHOHLnHrw4fvD6czejAd6l6NRApg8jFQfhPkSUrGb0WRDPQNdr1MwjVo78xowgJBReY/6JAR/YP1OCFjFrBp5jQlnfxm5eoS8SvlwCRrwSRTrapDFW+tpzVGnw0mFKx1FhB1gscsLIZT0CgYBYLJlIUbAe8Qy1B4OHdMZ9wxGzkok3OILBGPiUnaezmV0cuquEIUDUX5cWfytWksgscnORTLKX/CEz/YjqVxsLp5h1hZmhee4exmgKvE2mPeSLI11tmylRWnJqwvpITyl+TbO/8mxDokHILbDoVjGvFX9DQfaKwo/WYt9x82157QKBgQDO8dXkiHSaCA059l2eOYhDBrvefrINGjFEyrKCGj8MxDtdYfYvu7sxRhmmpVBmh+f/UtCwgxPDRk7fBwFJ9fN1GiAaH7TbOtDBb4bDxHwaWNUbgGM8kPA1eVh4BYlpttMx/OoLID/BJr2DL5yjf0teA/LubHWfCp4CDOqncR6b7w=="
+
+#TiposDocumentos
+documents:
+  CC: 1
+  TI: 2
+  CE: 3
+  RC: 4
+  NIT: 5
+  NUIP: 6
+  AP: 7
+
+#Configuracion de los tiempos de espera
+timeOut:
+  generalApiConnect: 3000
+  generalBD: 2000
+  timeoutConnection: 3000
