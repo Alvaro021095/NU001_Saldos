@@ -17,7 +17,7 @@ public class RoutePrueba {
     private String routePrueba;
 
     @Bean
-    public RouterFunction<ServerResponse> routesBalance(HandlerPrueba handler){
+    public RouterFunction<ServerResponse> routesPrueba(HandlerPrueba handler){
         return  route(
                 POST("/test")
                         .and(accept(APPLICATION_JSON))

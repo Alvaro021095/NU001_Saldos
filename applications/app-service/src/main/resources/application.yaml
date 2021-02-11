@@ -26,7 +26,7 @@ routes:
     recharge: /recharges/recharge
   #Rutas de api connect
   apiConnect:
-    urlBase: https://api-aws-qa.apps.ambientesbc.com
+    urlBase: https://practica-webclient.getsandbox.com:443
     uriRecharge: /int/testing/v1/operations/product-specific/consumer-services/recharges
     uriGetBalance: /int/testing/v1/operations/product-specific/consumer-services/recharges/product/balance
 

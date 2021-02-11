@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class UseCaseConfig {
 
 	@Bean
-	public PruebaUseCase balanceUseCase(PruebaGateway pruebaGateway) {
+	public PruebaUseCase pruebaUseCase(PruebaGateway pruebaGateway) {
 		return new PruebaUseCase(pruebaGateway);
 	}
 
