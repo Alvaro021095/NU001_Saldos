@@ -10,8 +10,7 @@ import lombok.RequiredArgsConstructor;
 @AllArgsConstructor
 @Builder(toBuilder = true)
 
-public class DataBalance{
-
-    private AccountBalanceRequest account;
-
+public class AccountBalanceRequest {
+    private String type;
+    private String number;
 }

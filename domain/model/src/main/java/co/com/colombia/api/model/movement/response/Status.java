@@ -1,4 +1,4 @@
-package co.com.colombia.api.model.balance.response;
+package co.com.colombia.api.model.movement.response;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

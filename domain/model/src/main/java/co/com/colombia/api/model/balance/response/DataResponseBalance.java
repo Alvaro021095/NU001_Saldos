@@ -5,9 +5,9 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
-public class Status {
-    private String code;
-    private String title;
-    private String detail;
-    private String severity;
+public class   DataResponseBalance {
+
+    private Account account;
+
+
 }
