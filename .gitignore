@@ -236,7 +236,7 @@ nb-configuration.xml
 ###########
 ## application yaml
 ###########
-applications/app-service/src/main/resources/application-local.yaml
+## applications/app-service#/src/main/resources/application-local.yaml
 
 ###########
 ## JMeter

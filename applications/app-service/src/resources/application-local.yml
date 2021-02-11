@@ -1,0 +1,19 @@
+uri:
+  prueba: /getTest
+
+routes:
+  apiConnect:
+    urlBase: https://practica-webclient.getsandbox.com:443
+
+#Configuracion de los tiempos de espera
+timeOut:
+  generalApiConnect: 5000
+  generalBD: 2000
+  timeoutConnection: 5000
+
+  ##Spring Configuration
+server:
+  port: 8087
+spring:
+  application:
+    name: prueba-service

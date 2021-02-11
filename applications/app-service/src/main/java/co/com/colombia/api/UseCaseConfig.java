@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Configuration;
 public class UseCaseConfig {
 
 	@Bean
-	public BalanceMovementUseCase balanceMovementUseCase(BalanceGateway balanceGateway, MovementGateway movementGateway) {
+	public BalanceMovementUseCase balanceMovementUseCase(BalanceGateway balanceGateway,
+														 MovementGateway movementGateway) {
 		return new BalanceMovementUseCase(balanceGateway, movementGateway);
 	}
-
 
 }
