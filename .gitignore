@@ -1,7 +1,7 @@
 # Created by https://www.gitignore.io/api/java,linux,macos,sonar,gradle,windows,eclipse,sonarqube,sublimetext,intellij+all,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=java,linux,macos,sonar,gradle,windows,eclipse,sonarqube,sublimetext,intellij+all,visualstudiocode
 
-application.yaml
+
 
 ### Eclipse ###
 .metadata
@@ -236,7 +236,7 @@ nb-configuration.xml
 ###########
 ## application yaml
 ###########
-applications/app-service/src/main/resources/application-local.yaml
+## applications/app-service#/src/main/resources/application-local.yaml
 
 ###########
 ## JMeter
