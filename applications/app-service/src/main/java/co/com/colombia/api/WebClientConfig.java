@@ -18,15 +18,6 @@ import java.util.concurrent.TimeUnit;
 @Configuration
 public class WebClientConfig {
 
-    @Value("${routes.apiConnect.urlBase:https://practica-webclient.getsandbox.com:443}")
-    private String urlBase;
-
-    @Value("${timeOut.generalApiConnect:20}")
-    private int timeoutRead;
-
-    @Value("${timeOut.timeoutConnection:20}")
-    private int timeoutConnection;
-
     @Bean
     public WebClient createWebClient() throws SSLException {
         SslContext sslContext = SslContextBuilder
@@ -38,13 +29,13 @@ public class WebClientConfig {
                 .secure(t -> t.sslContext(sslContext))
                 .tcpConfiguration(tcp ->
                         tcp.bootstrap(bootstrap -> bootstrap.option(ChannelOption.CONNECT_TIMEOUT_MILLIS,
-                                timeoutConnection))
+                                10000))
                                 .observe((connect, newState) -> {
                                     if (ConnectionObserver.State.CONNECTED.equals(newState)) {
-                                        connect.addHandlerLast(new ReadTimeoutHandler(timeoutRead,
+                                        connect.addHandlerLast(new ReadTimeoutHandler(10000,
                                                 TimeUnit.MILLISECONDS));}}));
 
-        return WebClient.builder().baseUrl(urlBase).clientConnector(new ReactorClientHttpConnector(httpClient)).build();
+        return WebClient.builder().baseUrl("https://practica-equipo-8.getsandbox.com").clientConnector(new ReactorClientHttpConnector(httpClient)).build();
     }
 
 

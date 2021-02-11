@@ -1,4 +1,4 @@
-package co.com.colombia.api.model.balance.request;
+package co.com.colombia.api.model.movement.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @Builder(toBuilder = true)
-
-public class DataBalance{
-
-    private AccountBalanceRequest account;
-
+public class AccountMovementRequest {
+    private String type;
+    private String number;
 }

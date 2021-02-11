@@ -1,9 +1,0 @@
-description = 'helpers: reactive repository commons'
-
-
-dependencies {
-    compile project(':model')
-    compile project(':usecase')
-    implementation libs.spring_boot
-
-}
