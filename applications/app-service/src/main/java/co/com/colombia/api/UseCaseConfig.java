@@ -12,6 +12,9 @@ public class UseCaseConfig {
 	@Bean
 	public BalanceMovementUseCase balanceMovementUseCase(BalanceGateway balanceGateway,
 														 MovementGateway movementGateway) {
+
+		System.out.println("Hola aqui hubo un cambio y lo arreglamos");
+
 		return new BalanceMovementUseCase(balanceGateway, movementGateway);
 	}
 

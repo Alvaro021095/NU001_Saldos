@@ -13,4 +13,6 @@ import lombok.RequiredArgsConstructor;
 public class AccountBalanceRequest {
     private String type;
     private String number;
+
+
 }
