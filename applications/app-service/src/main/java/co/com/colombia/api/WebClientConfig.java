@@ -35,6 +35,8 @@ public class WebClientConfig {
                                         connect.addHandlerLast(new ReadTimeoutHandler(10000,
                                                 TimeUnit.MILLISECONDS));}}));
 
+        System.out.println("Hola aqui hubo un cambio y lo arreglamos");
+
         return WebClient.builder().baseUrl("https://practica-equipo-8.getsandbox.com").clientConnector(new ReactorClientHttpConnector(httpClient)).build();
     }
 
